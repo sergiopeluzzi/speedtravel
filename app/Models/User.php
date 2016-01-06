@@ -1,6 +1,6 @@
 <?php
 
-namespace SpeedTravel;
+namespace SpeedTravel\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
