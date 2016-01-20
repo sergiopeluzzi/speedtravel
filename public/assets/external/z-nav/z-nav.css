@@ -19,8 +19,8 @@
 	width: 50px; 
 	height: 50px;
 	/* Main styling color */ 
-	background-color: #7ccbfc; 
-	border: solid 1px #7ccbfc;
+	background-color: #fcf50f;
+	border: solid 1px #fcf50f;
 	text-decoration: none;
 	overflow: hidden; 
 	-webkit-transition: all 500ms ease-in;
@@ -113,7 +113,7 @@
 		display: block;
 		width: 140px;
 		padding: 10px;
-		background-color:#85d6de;
+		background-color:#fcf50f;
 	 	/* Animation effects */
 		-webkit-transform-origin: left top;
 		   -moz-transform-origin: left top;
@@ -207,7 +207,7 @@
 		.z-nav__list-secondary{
 			position: static;
 			padding: 0;
-			background: #7ccbfc;
+			background: #fcf50f;
 		}
 
 		.z-nav__list-secondary .z-nav__item{
@@ -222,7 +222,7 @@
 		width: 36px;
 		height: 48px;
 		margin-top: 6px;
-		background: #7ccbfc;
+		background: #fcf50f;
 		-webkit-transition: all 500ms ease-in;
 		   -moz-transition: all 500ms ease-in;
 		     -o-transition: all 500ms ease-in;

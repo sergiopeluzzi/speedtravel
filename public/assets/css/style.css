@@ -2273,9 +2273,8 @@ ol {
   text-decoration: none;
 }
 .logo img {
-  width: 194px;
-  height: 46px;
-  margin-top: 28px;
+  width: 294px;
+  height: 106px;
 }
 .logo .logo__text {
   padding: 9px 0 9px 65px;
@@ -11137,7 +11136,7 @@ table th[class*="col-"] {
 }
 .error {
   text-align: center;
-  background-color: #34495e;
+  background-color: #ffee00;
   background-image: url(../images/components/error-stars.png);
   background-repeat: no-repeat;
   background-position: center center;
