@@ -25,8 +25,12 @@
                                 {!! Form::select('ativo', ['1' => 'Ativo', '0' => 'Inativo'], null, ['class' => 'contact__field']) !!}
                             </div>
                             <div class="form-group col-md-12" align="left">
-                                <button class="btn btn--decorated btn-primary btn-submit" type="submit">Salvar</button>
-                                <a class="btn btn--decorated btn-danger" href="{{ route('manager.cidades.index') }}">Voltar</a>
+                                <div class="btn--minimal-container-primary btn-present">
+                                    <button class="btn btn-primary btn--minimal" type="submit">Salvar</button>
+                                </div>
+                                <div class="btn--minimal-container-danger btn-present">
+                                    <a class="btn btn-danger btn--minimal" href="{{ route('manager.cidades.index') }}">Voltar</a>
+                                </div>
                             </div>
 
                         {!! Form::close() !!}

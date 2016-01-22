@@ -3,32 +3,39 @@
 @section('conteudo')
     <section>
         <div class="container">
-            <h2 class="heading heading--start">Cidades | Cadastro</h2>
+            <h2 class="heading heading--start">Planos | Cadastro</h2>
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-wrapper">
-                        {!! Form::open(['route' => 'manager.cidades.store', 'method' => 'post', 'class' => 'contact', 'id' => 'crt-cidades-frm']) !!}
-                            <div class="form-group col-md-8" align="left">
-                                {!! Form::label('cidade', 'Cidade') !!}
-                                {!! Form::text('cidade', null, ['class' => 'contact__field', 'required']) !!}
+                        {!! Form::open(['route' => 'manager.planos.store', 'method' => 'post', 'class' => 'contact', 'id' => 'crt-cidades-frm']) !!}
+                            <div class="form-group col-md-10" align="left">
+                                {!! Form::label('categoria', 'Categoria') !!}
+                                {!! Form::select('categoria', ['Internet' => 'Internet', 'TV' => 'TV', 'Telefonia' => 'Telefonia'], null, ['class' => 'contact__field', 'required']) !!}
                             </div>
-                            <div class="form-group col-md-8" align="left">
-                                {!! Form::label('estado', 'Estado') !!}
-                                {!! Form::text('estado', null, ['class' => 'contact__field', 'required']) !!}
+                            <div class="form-group col-md-10" align="left">
+                                {!! Form::label('nome', 'Nome') !!}
+                                {!! Form::text('nome', null, ['class' => 'contact__field', 'required']) !!}
+                            </div>
+                            <div class="form-group col-md-10" align="left">
+                                {!! Form::label('descricao', 'Descrição') !!}
+                                {!! Form::textArea('descricao', null, ['class' => 'contact__field', 'required']) !!}
                             </div>
                             <div class="form-group col-md-4" align="left">
-                                {!! Form::label('uf', 'UF') !!}
-                                {!! Form::text('uf', null, ['class' => 'contact__field', 'minlength' => '2', 'maxlength' => '2', 'required']) !!}
+                                {!! Form::label('valor', 'Valor') !!}
+                                {!! Form::text('valor', null, ['class' => 'contact__field', 'required']) !!}
                             </div>
                             <div class="form-group col-md-4" align="left">
                                 {!! Form::label('ativo', 'Status') !!}
                                 {!! Form::select('ativo', ['1' => 'Ativo', '0' => 'Inativo'], null, ['class' => 'contact__field']) !!}
                             </div>
                             <div class="form-group col-md-12" align="left">
-                                <button class="btn btn--decorated btn-primary btn-submit" type="submit">Salvar</button>
-                                <a class="btn btn--decorated btn-danger" href="{{ route('manager.cidades.index') }}">Voltar</a>
+                                <div class="btn--minimal-container-primary btn-present">
+                                    <button class="btn btn-primary btn--minimal" type="submit">Salvar</button>
+                                </div>
+                                <div class="btn--minimal-container-danger btn-present">
+                                    <a class="btn btn-danger btn--minimal" href="{{ route('manager.planos.index') }}">Voltar</a>
+                                </div>
                             </div>
-
                         {!! Form::close() !!}
                     </div><!-- end wrapper -->
                 </div><!-- end col -->

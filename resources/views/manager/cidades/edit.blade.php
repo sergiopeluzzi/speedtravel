@@ -7,7 +7,6 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-wrapper">
-
                         {!! Form::model($cidade, ['route' => ['manager.cidades.update', $cidade->id], 'method' => 'put', 'class' => 'contact']) !!}
                             <div class="form-group col-md-8" align="left">
                                 {!! Form::label('cidade', 'Cidade') !!}
@@ -29,7 +28,6 @@
                                 <button class="btn btn--decorated btn-primary btn-submit" type="submit">Atualizar</button>
                                 <a class="btn btn--decorated btn-danger" href="{{ route('manager.cidades.index') }}">Voltar</a>
                             </div>
-
                         {!! Form::close() !!}
                     </div><!-- end wrapper -->
                 </div><!-- end col -->

@@ -123,6 +123,8 @@
 <script>window.jQuery || document.write('<script src="{{ asset('assets/external/jquery/jquery-1.10.1.min.js') }}"><\/script>')</script>
 <!--jQuery References-->
 <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
+<!-- JqueryMask -->
+<script src="{{ asset('assets/external/jQuery-mask/jquery-mask.min.js') }}"></script>
 <!-- Bootstrap 3-->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <!-- Select box -->

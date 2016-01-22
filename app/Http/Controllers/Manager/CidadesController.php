@@ -35,7 +35,7 @@ class CidadesController extends Controller
     {
         $this->cidade->create($request->all());
 
-        $this->toast->message('Cidade cadastrada com sucesso', 'success');
+        $this->toast->message('Cidade ' . $this->cidade->latest()->first()->cidade . ' cadastrada com sucesso', 'success');
 
         return redirect()->route('manager.cidades.index');
     }

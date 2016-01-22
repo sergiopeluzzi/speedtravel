@@ -3,12 +3,12 @@
 @section('conteudo')
     <section>
         <div class="container">
-            <h2 class="heading heading--start">Cidades | Lista</h2>
+            <h2 class="heading heading--start">Planos | Lista</h2>
 
             @include('toast::messages-jquery')
 
             <div class="table-responsive">
-                <table class="table table-bordered table-hover table--wide table-present">
+                <table class="table table-bordered table--wide table-present">
                     <colgroup class="col-sm-width">
                     <colgroup class="col-sm-width">
                     <colgroup class="col-sm-width">
@@ -19,23 +19,25 @@
                         <thead>
                             <tr class="bg-primary">
                                 <th class="text-center">#</th>
-                                <th class="text-center">Cidade</th>
-                                <th class="text-center">Estado</th>
-                                <th class="text-center">UF</th>
+                                <th class="text-center">Nome</th>
+                                <th class="text-center">Descrição</th>
+                                <th class="text-center">Categoria</th>
+                                <th class="text-center">Valor</th>
                                 <th class="text-center">Ações</th>
                             </tr>
                         </thead>
 
                         <tbody>
-                            @foreach($cidades as $cidade)
-                            <tr @if($cidade->ativo == 0) class="bg-danger" @endif>
-                                <td class="text-center">{{ $cidade->id }}</td>
-                                <td>{{ $cidade->cidade }}</td>
-                                <td>{{ $cidade->estado }}</td>
-                                <td class="text-center">{{ $cidade->uf }}</td>
+                            @foreach($planos as $plano)
+                            <tr @if($plano->ativo == 0) class="bg-danger" @endif>
+                                <td class="text-center">{{ $plano->id }}</td>
+                                <td>{{ $plano->nome }}</td>
+                                <td>{{ $plano->descricao }}</td>
+                                <td>{{ $plano->categoria }}</td>
+                                <td class="text-center">R$ {{ number_format($plano->valor, 2, ',', '.') }}</td>
                                 <td class="text-center">
-                                    <a class="btn btn-warning btn-sm" href="{{ route('manager.cidades.edit', ['id' => $cidade->id]) }}">Editar</a>
-                                    <a class="btn btn-danger btn-sm" data-toggle="modal" data-target="#confirm-delete" href="#" data-href="{{ route('manager.cidades.destroy', ['id' => $cidade->id]) }}">Excluir</a>
+                                    <a class="btn btn-warning btn-sm" href="{{ route('manager.planos.edit', ['id' => $plano->id]) }}">Editar</a>
+                                    <a class="btn btn-danger btn-sm" data-toggle="modal" data-target="#confirm-delete" href="#" data-href="{{ route('manager.planos.destroy', ['id' => $plano->id]) }}">Excluir</a>
                                 </td>
                             </tr>
                             @endforeach
@@ -43,9 +45,11 @@
                 </table>
 
             </div>
-            {!! $cidades->links() !!}
+            {!! $planos->links() !!}
             <div class="col-md-12">
-                <a class="btn btn--decorated btn-primary" href="{{ route('manager.cidades.create') }}">Adicionar</a>
+                <div class="btn--minimal-container-primary btn-present">
+                    <a class="btn btn-primary btn--minimal" href="{{ route('manager.planos.create') }}">Adicionar</a>
+                </div>
             </div>
             <!-- end col -->
 
@@ -56,7 +60,7 @@
                             <h3>Confirmação de Exclusão</h3>
                         </div>
                         <div class="modal-body text-center ">
-                            Tem certeza que deseja excluir esta cidade?
+                            Tem certeza que deseja excluir este plano?
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">NÃO</button>

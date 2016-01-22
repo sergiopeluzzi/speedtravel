@@ -41,6 +41,11 @@ Route::group(['middleware' => ['web']], function () {
 
         Route::group(['prefix' => 'planos'], function(){
             Route::get('/', ['as' => 'manager.planos.index', 'uses' => 'PlanosController@index']);
+            Route::get('/adicionar', ['as' => 'manager.planos.create', 'uses' => 'PlanosController@create']);
+            Route::post('/salvar', ['as' => 'manager.planos.store', 'uses' => 'PlanosController@store']);
+            Route::get('/editar/{id}', ['as' => 'manager.planos.edit', 'uses' => 'PlanosController@edit']);
+            Route::put('/atualizar/{id}', ['as' => 'manager.planos.update', 'uses' => 'PlanosController@update']);
+            Route::get('/excluir/{id}', ['as' => 'manager.planos.destroy', 'uses' => 'PlanosController@destroy']);
         });
     });
 });

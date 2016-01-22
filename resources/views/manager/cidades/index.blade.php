@@ -8,7 +8,7 @@
             @include('toast::messages-jquery')
 
             <div class="table-responsive">
-                <table class="table table-bordered table-hover table--wide table-present">
+                <table class="table table-bordered table--wide table-present">
                     <colgroup class="col-sm-width">
                     <colgroup class="col-sm-width">
                     <colgroup class="col-sm-width">
@@ -45,7 +45,9 @@
             </div>
             {!! $cidades->links() !!}
             <div class="col-md-12">
-                <a class="btn btn--decorated btn-primary" href="{{ route('manager.cidades.create') }}">Adicionar</a>
+                <div class="btn--minimal-container-primary btn-present">
+                    <a class="btn btn-primary btn--minimal" href="{{ route('manager.cidades.create') }}">Adicionar</a>
+                </div>
             </div>
             <!-- end col -->
 
