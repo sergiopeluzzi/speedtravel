@@ -16,6 +16,6 @@ class ManagerController extends Controller
 
     public function login()
     {
-        return 'Oi';
+        return view('manager.login');
     }
 }
