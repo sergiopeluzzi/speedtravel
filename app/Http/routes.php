@@ -27,7 +27,7 @@ Route::get('/', [ 'as' => 'site.index', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
-    Route::group(['prefix' => 'manager', 'namespace' => 'Manager'], function() {
+    Route::group(['prefix' => 'manager', 'namespace' => 'Manager', 'middleware' => 'auth'], function() {
         Route::get('/', [ 'as' => 'manager.index', 'uses' => 'ManagerController@index']);
 
         Route::group(['prefix' => 'cidades'], function() {
