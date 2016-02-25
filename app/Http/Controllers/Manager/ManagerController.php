@@ -13,4 +13,9 @@ class ManagerController extends Controller
     {
         return view('manager.index');
     }
+
+    public function login()
+    {
+        return 'Oi';
+    }
 }

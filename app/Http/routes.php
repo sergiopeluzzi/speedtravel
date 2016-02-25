@@ -30,6 +30,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::group(['prefix' => 'manager', 'namespace' => 'Manager', 'middleware' => 'auth'], function() {
         Route::get('/', [ 'as' => 'manager.index', 'uses' => 'ManagerController@index']);
 
+        Route::get('/login', [ 'as' => 'manager.login', 'uses' => 'ManagerController@login']);
+
         Route::group(['prefix' => 'cidades'], function() {
             Route::get('/', ['as' => 'manager.cidades.index', 'uses' => 'CidadesController@index']);
             Route::get('/adicionar', ['as' => 'manager.cidades.create', 'uses' => 'CidadesController@create']);
