@@ -54,15 +54,6 @@
         </a>
         <!-- end logo -->
 
-        <!-- Search field -->
-        <form class="search search--empty" id="search-form" name="search-form" method="get" action="#">
-            <input class="search__field" name="search-request" type="search" placeholder="Busca..." value="">
-            <button class="search__btn" type="submit">
-                <i class="fa fa-search"></i>
-            </button>
-        </form>
-        <!-- end search field -->
-
         <div class="header__controls">
             <!-- User login area -->
             @if(Auth::check())
@@ -70,10 +61,9 @@
                 <span class="user__name">{{ Auth::user()->name }}</span>
             </a>
             <!-- end user login area -->
-
+            @endif
             <!-- Sign out button -->
             <a class="btn btn-warning btn--decorated btn--logout" href="{{ route('manager.logout') }}"><i class="fa fa-sign-out"></i></a>
-            @endif
         </div>
 
     </header>
