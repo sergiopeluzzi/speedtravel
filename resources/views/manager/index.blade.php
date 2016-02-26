@@ -56,7 +56,7 @@
         </a>
         <!-- end logo -->
 
-        <div class="header">
+        <div class="header__controls">
             <!-- User login area -->
             @if(Auth::check())
             <a class="user" href="#">
