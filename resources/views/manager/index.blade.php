@@ -49,7 +49,7 @@
 <body>
 
 <div class="wrapper">
-    <header class="header">
+    <header class="header-fluid">
         <!-- Logo -->
         <a class="logo" href="{{ route('manager.index') }}">
             <img style="width: 200px; height: auto; padding-left: 30px; padding-top: 20px" src="{{ asset('assets/images/logo.png') }}" alt="SpeedTravel">
@@ -58,9 +58,9 @@
 
         <div class="header__controls">
             <!-- User login area -->
-            @if(Auth::check())
+            @if(\Auth::check())
             <a class="user" href="#">
-                <span class="user__name">{{ Auth::user()->name }}</span>
+                <span class="user__name">{{ \Auth::user()->name }}</span>
             </a>
             <!-- end user login area -->
             @endif
@@ -81,7 +81,7 @@
     <aside class="nav-sidebar">
         <div class="nav-sidebar-container">
             <h3 class="nav-sidebar__title">Navegação</h3>
-            @if(Auth::check())
+            @if(\Auth::check())
             <nav>
                 <a class="navigation-toggle" href="#"><i class="fa fa-bars"></i></a>
                 <ul class="navigation">
@@ -97,7 +97,7 @@
 
         <div class="devider devider--dark"></div>
 
-        @if(Auth::check())
+        @if(\Auth::check())
         <div class="nav-sidebar-container">
             <h3 class="nav-sidebar__title">Notificações <span class="badge pull-right">1</span></h3>
 
