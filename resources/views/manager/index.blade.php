@@ -65,13 +65,13 @@
 
         <div class="header__controls">
             <!-- User login area -->
-            <a class="user" href="{{ route('manager.logout') }}">
-                <span class="user__name">Sergio Peluzzi</span>
+            <a class="user" href="">
+                <span class="user__name">{{ Auth::user()->name }}</span>
             </a>
             <!-- end user login area -->
 
             <!-- Sign out button -->
-            <a class="btn btn-warning btn--decorated btn--logout" href="#"><i class="fa fa-sign-out"></i></a>
+            <a class="btn btn-warning btn--decorated btn--logout" href="{{ route('manager.logout') }}"><i class="fa fa-sign-out"></i></a>
         </div>
 
     </header>
