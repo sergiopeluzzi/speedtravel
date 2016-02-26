@@ -2,7 +2,7 @@
 
 @section('conteudo')
     <section>
-        <div class="container col-md-11">
+        <div class="container col-md-12">
             <h2 class="heading heading--start">Cidades | Lista</h2>
 
             @include('toast::messages-jquery')
