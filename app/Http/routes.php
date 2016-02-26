@@ -28,7 +28,11 @@ Route::get('/', [ 'as' => 'site.index', function () {
 
 Route::group(['middleware' => ['web']], function () {
 
-    Route::get('/manager/login', [ 'as' => 'manager.login', 'uses' => 'Auth\AuthController@getLogin']);
+    Route::group(['prefix' => 'manager'], function(){
+        Route::get('/manager/login', [ 'as' => 'manager.login', 'uses' => 'Auth\AuthController@getLogin']);
+        Route::post('/manager/login', [ 'as' => 'manager.login', 'uses' => 'Auth\AuthController@postLogin']);
+        Route::get('/manager/logout', [ 'as' => 'manager.logout', 'uses' => 'Auth\AuthController@getLogout']);
+    });
 
     Route::group(['prefix' => 'manager', 'namespace' => 'Manager', 'middleware' => 'auth'], function() {
         Route::get('/', [ 'as' => 'manager.index', 'uses' => 'ManagerController@index']);
