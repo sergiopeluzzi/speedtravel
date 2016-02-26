@@ -84,8 +84,8 @@
 <section>
     <h3 class="not-visible">Container Principal</h3>
 
+    @if(Auth::check())
     <aside class="nav-sidebar">
-        @if(Auth::check())
         <div class="nav-sidebar-container">
             <h3 class="nav-sidebar__title">Navegação</h3>
 
@@ -112,9 +112,8 @@
             </div>
 
         </div>
-        @endif
     </aside>
-
+    @endif
 
     <div class="content-dashboard">
         @yield('conteudo')
