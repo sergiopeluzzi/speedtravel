@@ -83,13 +83,13 @@
 
 
 <section>
-    @if(Auth::check())
+
     <h3 class="not-visible">Container Principal</h3>
 
     <aside class="nav-sidebar">
         <div class="nav-sidebar-container">
             <h3 class="nav-sidebar__title">Navegação</h3>
-
+            @if(Auth::check())
             <nav>
                 <a class="navigation-toggle" href="#"><i class="fa fa-bars"></i></a>
                 <ul class="navigation">
@@ -99,11 +99,13 @@
                     <li class="navigation__item"><a class="navigation__link" href="#"><i class="fa fa-file"></i>Relatórios</a></li>
                 </ul>
             </nav>
+            @endif
 
         </div>
 
         <div class="devider devider--dark"></div>
 
+        @if(Auth::check())
         <div class="nav-sidebar-container">
             <h3 class="nav-sidebar__title">Notificações <span class="badge pull-right">1</span></h3>
 
@@ -111,10 +113,11 @@
                 <a class="news__heading" href="#">Nova venda (R$ 240,00) </a>
                 <p class="news__date">09:52 | Janeiro 18, 2016</p>
             </div>
-
         </div>
+        @endif
+
     </aside>
-    @endif
+
 
     <div class="content-dashboard">
         @yield('conteudo')
