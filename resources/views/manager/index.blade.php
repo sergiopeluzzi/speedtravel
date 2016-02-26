@@ -85,9 +85,10 @@
     <h3 class="not-visible">Container Principal</h3>
 
     <aside class="nav-sidebar">
+        @if(Auth::check())
         <div class="nav-sidebar-container">
             <h3 class="nav-sidebar__title">Navegação</h3>
-            @if(Auth::check())
+
             <nav>
                 <a class="navigation-toggle" href="#"><i class="fa fa-bars"></i></a>
                 <ul class="navigation">
@@ -97,7 +98,7 @@
                     <li class="navigation__item"><a class="navigation__link" href="#"><i class="fa fa-file"></i>Relatórios</a></li>
                 </ul>
             </nav>
-            @endif
+
         </div>
 
         <div class="devider devider--dark"></div>
@@ -111,6 +112,7 @@
             </div>
 
         </div>
+        @end
     </aside>
 
 
