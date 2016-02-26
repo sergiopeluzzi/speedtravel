@@ -73,12 +73,14 @@ class AuthController extends Controller
 
     public function getLogout()
     {
+        return 'Oi';
+        /*
         $this->auth->logout();
 
         Session::flush();
 
         $data['logout'] = true;
 
-        return redirect('/')->with('data',$data);
+        return redirect('/')->with('data',$data);*/
     }
 }
