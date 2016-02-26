@@ -3,8 +3,8 @@
 namespace SpeedTravel\Http\Controllers\Auth;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use SpeedTravel\User;
-use Symfony\Component\HttpFoundation\Session\Session;
 use Validator;
 use SpeedTravel\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
