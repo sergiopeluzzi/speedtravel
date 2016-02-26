@@ -43,6 +43,12 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
     <![endif]-->
+
+    @if(session()->has('data') && session('data')['logout'])
+        {{ session_unset() }}
+        {{ setcookie('laravel_session', "", -1, "/") }}
+    @endif
+
 </head>
 
 <body>

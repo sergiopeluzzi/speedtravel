@@ -77,6 +77,8 @@ class AuthController extends Controller
 
         Session::flush();
 
-        return redirect('/');
+        $data['logout'] = true;
+
+        return redirect('/')->with('data',$data);
     }
 }
