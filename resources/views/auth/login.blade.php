@@ -82,8 +82,8 @@
             <div class="login">
                 {!! Form::open(['route' => 'manager.login', 'method' => 'post', 'class' => 'contact', 'id' => 'contact-form', 'name' => 'contact-form']) !!}
 
-                <input class="contact__field" id="email" name="contact-email" type="email" placeholder="email">
-                <input class="contact__field" id="password" name="contact-pass" type="password" placeholder="password">
+                <input class="contact__field" id="email" name="email" type="email" placeholder="email">
+                <input class="contact__field" id="password" name="password" type="password" placeholder="password">
 
                 <div class="checkbox">
                     <input id="check1" type="checkbox" name="check" value="check1" checked="checked">
