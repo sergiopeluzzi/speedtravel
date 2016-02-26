@@ -70,7 +70,7 @@
             <!-- end user login area -->
             @endif
             <!-- Sign out button -->
-            <a class="btn btn-warning btn--decorated btn--logout" href="{{ route('manager.logout') }}"><i class="fa fa-sign-out"></i></a>
+            <a href="{{ route('manager.logout') }}"><i class="fa fa-sign-out"></i></a>
         </div>
 
     </header>
