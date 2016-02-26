@@ -6,7 +6,7 @@
     <h2 class="block-title block-title--top-large block-title--bottom">Login</h2>
 
     <div class="login">
-        <form class="contact" id="contact-form" name="contact-form" method="post" action="#" novalidate>
+        {!! Form::open(['route' => 'manager.login', 'method' => 'post', 'class' => 'contact', 'id' => 'contact-form', 'name' => 'contact-form', 'novalidate']) !!}
 
             <input class="contact__field" name="contact-email" type="email" placeholder="email">
             <input class="contact__field" name="contact-pass" type="password" placeholder="password">
@@ -16,7 +16,7 @@
                 <label for="check1">lembrar-me</label>
             </div>
             <button class="btn btn--decorated btn-warning login__btn" type="submit">Login</button>
-        </form>
+        {!! Form::close() !!}
     </div>
 </section><!-- end container -->
 
