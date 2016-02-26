@@ -13,18 +13,10 @@
 
             <div class="checkbox">
                 <input id="check1" type="checkbox" name="check" value="check1" checked="checked">
-                <label for="check1">remember me</label>
+                <label for="check1">lembrar-me</label>
             </div>
-            <a class="login__callback" href="#">Forgot password?</a>
             <button class="btn btn--decorated btn-warning login__btn" type="submit">Login</button>
         </form>
-    </div>
-
-    <div class="btn-wrapper">
-        <h3 class="heading-helper heading-helper--bottom">You can also sign in via social accounts:</h3>
-
-        <a class="btn btn--decorated btn--facebook" href="#"><i class="fa fa-facebook"></i>Facebook</a>
-        <a class="btn btn--decorated btn--twitter" href="#"><i class="fa fa-twitter"></i>Twitter</a>
     </div>
 </section><!-- end container -->
 
