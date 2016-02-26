@@ -2,7 +2,9 @@
 
 namespace SpeedTravel\Http\Controllers\Auth;
 
+use Illuminate\Support\Facades\Auth;
 use SpeedTravel\User;
+use Symfony\Component\HttpFoundation\Session\Session;
 use Validator;
 use SpeedTravel\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
@@ -29,8 +31,6 @@ class AuthController extends Controller
      * @var string
      */
     protected $redirectTo = '/manager';
-
-    protected $redirectAfterLogout = '/';
 
     /**
      * Create a new authentication controller instance.
@@ -70,5 +70,11 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    public function getLogout(){
+        Auth::logout();
+        Session::flush();
+        return Redirect::to('/');
     }
 }
