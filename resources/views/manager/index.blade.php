@@ -112,7 +112,7 @@
             </div>
 
         </div>
-        @end
+        @endif
     </aside>
 
 
