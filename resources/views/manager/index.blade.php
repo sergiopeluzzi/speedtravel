@@ -65,7 +65,7 @@
 
         <div class="header__controls">
             <!-- User login area -->
-            <a class="user" href="#">
+            <a class="user" href="{{ route('manager.logout') }}">
                 <span class="user__name">Sergio Peluzzi</span>
             </a>
             <!-- end user login area -->
