@@ -56,11 +56,11 @@
         </a>
         <!-- end logo -->
 
-        <div class="header__controls">
+        <div class="header">
             <!-- User login area -->
-            @if(\Auth::check())
+            @if(Auth::check())
             <a class="user" href="#">
-                <span class="user__name">{{ \Auth::user()->name }}</span>
+                <span class="user__name">{{ Auth::user()->name }}</span>
             </a>
             <!-- end user login area -->
             @endif
@@ -81,7 +81,7 @@
     <aside class="nav-sidebar">
         <div class="nav-sidebar-container">
             <h3 class="nav-sidebar__title">Navegação</h3>
-            @if(\Auth::check())
+            @if(Auth::check())
             <nav>
                 <a class="navigation-toggle" href="#"><i class="fa fa-bars"></i></a>
                 <ul class="navigation">
@@ -97,7 +97,7 @@
 
         <div class="devider devider--dark"></div>
 
-        @if(\Auth::check())
+        @if(Auth::check())
         <div class="nav-sidebar-container">
             <h3 class="nav-sidebar__title">Notificações <span class="badge pull-right">1</span></h3>
 
