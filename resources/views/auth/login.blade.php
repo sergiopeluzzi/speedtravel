@@ -2,8 +2,8 @@
 
 @section('conteudo')
 
-<section class="container">
-    <h2 class="block-title block-title--top-large block-title--bottom">Login</h2>
+<section class="container wrapper">
+    <h2 class="block-title block-title--top-middle block-title--bottom">Login</h2>
 
     <div class="login">
         {!! Form::open(['route' => 'manager.login', 'method' => 'post', 'class' => 'contact', 'id' => 'contact-form', 'name' => 'contact-form', 'novalidate']) !!}
