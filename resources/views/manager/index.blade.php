@@ -48,13 +48,8 @@
 
 <body>
 
-@if(session()->has('data') && session('data')['logout'])
-    {{ session_unset() }}
-    {{ setcookie('laravel_session', "", -1, "/") }}
-@endif
-
 <div class="wrapper">
-    <header class="header-fluid">
+    <header class="header">
         <!-- Logo -->
         <a class="logo" href="{{ route('manager.index') }}">
             <img style="width: 200px; height: auto; padding-left: 30px; padding-top: 20px" src="{{ asset('assets/images/logo.png') }}" alt="SpeedTravel">
@@ -70,7 +65,7 @@
             <!-- end user login area -->
             @endif
             <!-- Sign out button -->
-            <a href="{{ route('manager.logout') }}"><i class="fa fa-sign-out"></i></a>
+            <a class="btn btn-warning btn--decorated btn--logout" href="{{ route('manager.logout') }}"><i class="fa fa-sign-out"></i></a>
         </div>
 
     </header>
