@@ -81,10 +81,11 @@
     <div class="devider-color"></div>
 </div>
 
+
 <section>
+    @if(Auth::check())
     <h3 class="not-visible">Container Principal</h3>
 
-    @if(Auth::check())
     <aside class="nav-sidebar">
         <div class="nav-sidebar-container">
             <h3 class="nav-sidebar__title">Navegação</h3>
