@@ -27,10 +27,11 @@ Route::get('/', [ 'as' => 'site.index', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
+
+    Route::get('/manager/login', [ 'as' => 'manager.login', 'uses' => 'Auth\AuthController@getLogin']);
+
     Route::group(['prefix' => 'manager', 'namespace' => 'Manager', 'middleware' => 'auth'], function() {
         Route::get('/', [ 'as' => 'manager.index', 'uses' => 'ManagerController@index']);
-
-        Route::get('/login', [ 'as' => 'manager.login', 'uses' => 'ManagerController@login']);
 
         Route::group(['prefix' => 'cidades'], function() {
             Route::get('/', ['as' => 'manager.cidades.index', 'uses' => 'CidadesController@index']);
