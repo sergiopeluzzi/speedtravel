@@ -2,7 +2,6 @@
 
 namespace SpeedTravel\Http\Controllers\Auth;
 
-use Illuminate\Support\Facades\Session;
 use SpeedTravel\User;
 use Validator;
 use SpeedTravel\Http\Controllers\Controller;
@@ -69,18 +68,5 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
-    }
-
-    public function getLogout()
-    {
-        return 'Oi';
-        /*
-        $this->auth->logout();
-
-        Session::flush();
-
-        $data['logout'] = true;
-
-        return redirect('/')->with('data',$data);*/
     }
 }
