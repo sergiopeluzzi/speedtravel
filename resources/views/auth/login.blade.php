@@ -80,7 +80,7 @@
             <h2 class="block-title block-title--top-large block-title--bottom">Login</h2>
 
             <div class="login">
-                {!! Form::open(['route' => 'manager.login', 'method' => 'post', 'class' => 'contact', 'id' => 'contact-form', 'name' => 'contact-form', 'novalidate']) !!}
+                {!! Form::open(['route' => 'manager.login', 'method' => 'post', 'class' => 'contact', 'id' => 'contact-form', 'name' => 'contact-form']) !!}
 
                 <input class="contact__field" name="contact-email" type="email" placeholder="email">
                 <input class="contact__field" name="contact-pass" type="password" placeholder="password">
