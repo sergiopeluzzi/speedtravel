@@ -187,7 +187,7 @@
             <ul>
                 <!-- Slide -->
                 <li data-transition="fade" data-slotamount="3" data-text="Rodapé aqui!">
-                    <img src="http://placehold.it/1x1" alt="">
+                    <img src="{{ asset('assets/images/banner3.jpg') }}" alt="">
                     <div class="caption sft slider__heading" data-x="center" data-y="85" data-speed="800" data-start="1300" data-easing="Back.easeOut">
                         Speed Combo | Speed Fibra | Speed TV | Speed Phone
                     </div>
@@ -202,7 +202,7 @@
 
                 <!-- Slide -->
                 <li data-transition="fade" data-slotamount="3"  data-text="Rodapé 2 aqui!">
-                    <img src="http://placehold.it/1x1" alt="">
+                    <img src="{{ asset('assets/images/banner2.jpg') }}" alt="">
                     <div class="caption customin customout slider-width slider__heading--sm-danger" data-x="right" data-y="120" data-speed="700" data-start="1300" data-easing="Power1.easeIn" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;">
                         Melhor produto da região!
                     </div>
@@ -223,7 +223,7 @@
 
                 <!-- Slide -->
                 <li data-transition="fade" data-slotamount="3" data-text="Rodapé 3 Aqui!">
-                    <img src="http://placehold.it/1x1" alt="">
+                    <img src="{{ asset('assets/images/banner4.jpg') }}" alt="">
                     <div class="caption customin tp-resizeme" data-x="center" data-y="center" data-speed="900" data-start="1200" data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-easing="Power3.easeInOut">
                         <div class="brand-circle"></div>
                     </div>
