@@ -192,7 +192,7 @@
                         Speed Combo | Speed Fibra | Speed TV | Speed Phone
                     </div>
                     <div class="caption lfb skewtoleft slider__phone" data-x="center" data-y="bottom" data-speed="900" data-start="1900" data-easing="Power4.easeOut">
-                        <img src="{{ asset('assets/images/slider/full-width/brand-phone.png') }}" alt="">
+                        <!-- <img src="{{ asset('assets/images/slider/full-width/brand-phone.png') }}" alt=""> -->
                     </div>
                     <div class="caption customin customout slider__btn tp-resizeme" data-x="center" data-y="bottom" data-voffset="-70" data-speed="800" data-start="2700" data-easing="Back.easeOut" data-customout="x:0;y:180;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;">
                         <a class="btn btn-warning btn--decorated" href="#">Assine já!</a>
