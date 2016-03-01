@@ -22,17 +22,22 @@
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Stylesheets -->
+    <!-- External -->
     <!-- Mobile menu -->
     <link href="{{ asset('assets/external/z-nav/z-nav.css') }}" rel="stylesheet">
-    <!-- Flexslider -->
-    <link href="{{ asset('assets/external/flexslider/flexslider.css') }}" rel="stylesheet">
+
+    <!-- Sliders -->
+    <!-- Revolution slider -->
+    <link href="{{ asset('assets/external/rs-plugin/css/settings.css') }}" rel="stylesheet"  media="screen" />
     <!-- Touch slider - Swiper -->
     <link href="{{ asset('assets/external/swiper/idangerous.swiper.css') }}" rel="stylesheet" />
+
     <!-- Custom -->
     <link href="{{ asset('assets/css/style.css?v=1') }}" rel="stylesheet" />
+
     <!-- Basic JavaScript-->
     <!-- Modernizr -->
-    <script src="{{ asset('assets/external/modernizr/modernizr.custom.js') }}"></script>
+    <script src="{{ asset('assets/') }}external/modernizr/modernizr.custom.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -41,7 +46,7 @@
     <![endif]-->
 
     <!--[if lte IE 9]>
-    <link href="{{ asset('assets/css/ie9.css?v=1') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/ie9.css?v=1') }} " rel="stylesheet" />
     <![endif]-->
 </head>
 
@@ -177,37 +182,156 @@
     <!-- end header section -->
 
 
+    <div class="bannercontainer">
+        <div class="banner">
+            <ul>
+                <!-- Slide -->
+                <li data-transition="fade" data-slotamount="3" data-text="Rodapé aqui!">
+                    <img src="http://placehold.it/1x1" alt="">
+                    <div class="caption sft slider__heading" data-x="center" data-y="85" data-speed="800" data-start="1300" data-easing="Back.easeOut">
+                        Speed Combo | Speed Fibra | Speed TV | Speed Phone
+                    </div>
+                    <div class="caption lfb skewtoleft slider__phone" data-x="center" data-y="bottom" data-speed="900" data-start="1900" data-easing="Power4.easeOut">
+                        <img src="{{ asset('assets/images/slider/full-width/brand-phone.png') }}" alt="">
+                    </div>
+                    <div class="caption customin customout slider__btn tp-resizeme" data-x="center" data-y="bottom" data-voffset="-70" data-speed="800" data-start="2700" data-easing="Back.easeOut" data-customout="x:0;y:180;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;">
+                        <a class="btn btn-warning btn--decorated" href="#">Assine já!</a>
+                    </div>
+                </li>
+                <!-- end slide -->
 
-    <!-- Section show current page and breadcrumb -->
-    <section class="page-indecator">
+                <!-- Slide -->
+                <li data-transition="fade" data-slotamount="3"  data-text="Rodapé 2 aqui!">
+                    <img src="http://placehold.it/1x1" alt="">
+                    <div class="caption customin customout slider-width slider__heading--sm-danger" data-x="right" data-y="120" data-speed="700" data-start="1300" data-easing="Power1.easeIn" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;">
+                        Melhor produto da região!
+                    </div>
+                    <div class="caption customin customout slider-width slider__heading--lg-primary" data-x="right" data-y="156" data-speed="500" data-start="1600" data-easing="Power1.easeIn" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;">
+                        Equipe qualificada!
+                    </div>
+                    <div class="caption customin customout slider-width slider__text" data-x="right" data-y="242" data-speed="700" data-start="2300" data-easing="Power4.easeOut" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-customin="x:0;y:100;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:3;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:0% 0%;">
+                        Nam auctor dapibus ante vel facilisis. Cras eget adipiscing nisi.<br>
+                        Duis aliquet ligula non risus sollicitudin commodo. Donec ullamcorper<br>
+                        lacinia turpis at aliquet. Cras consectetur fermentum erat,<br>
+                        in placerat ligula pharetra eget.
+                    </div>
+                    <div class="caption sfr slider-width slider__btn" data-x="right" data-y="387" data-speed="600" data-start="2900">
+                        <a class="link" href="#">Saiba mais > </a>
+                    </div>
+                </li>
+                <!-- end slide -->
+
+                <!-- Slide -->
+                <li data-transition="fade" data-slotamount="3" data-text="Rodapé 3 Aqui!">
+                    <img src="http://placehold.it/1x1" alt="">
+                    <div class="caption customin tp-resizeme" data-x="center" data-y="center" data-speed="900" data-start="1200" data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-easing="Power3.easeInOut">
+                        <div class="brand-circle"></div>
+                    </div>
+                    <div class="caption customin customout slider__heading--dark" data-x="center" data-y="241" data-speed="700" data-start="1700" data-easing="Power1.easeIn" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;">
+                        Conecte-se ao Mundo
+                    </div>
+                    <div class="caption customin customout slider__heading--dark-sm" data-x="center" data-y="292" data-speed="500" data-start="2000" data-easing="Power1.easeIn" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;">
+                        com a Speed Travel
+                    </div>
+                    <div class="caption lfr slider__btn slider__btn-lg tp-resizeme" data-x="center" data-y="362" data-speed="600" data-start="2600">
+                        <a class="btn btn-warning btn--decorated" href="#">Junte-se a nós!</a>
+                    </div>
+                </li>
+                <!-- end slide -->
+            </ul>
+        </div>
+    </div>
+
+    <div class="banner-control top-space">
         <div class="container">
-            <h2 class="heading">Current</h2>
+            <p class="slider-info"></p>
+        </div>
+    </div>
 
-            <!-- Breadcrumb pattern -->
-            <ol class="breadcrumb">
-                <li><a href="{{ route('site.index') }}">Home</a></li>
-                <li class="active">Current</li>
-            </ol>
+    <!-- Slider placeholder for mobile view (first variant) -->
+    <div class="mobile-full-placeholeder">
+        <h2 class="full-placeholeder__headind slider__heading">Speed Combo | Speed Fibra | Speed TV | Speed Phone</h2>
+        <a class="btn btn-warning btn--decorated" href="#">Assine já!</a>
+    </div>
 
-            <!-- Default one color devider -->
-            <div class="devider devider--bottom-md"></div>
+    <div class="placeholeder-control top-space">
+        <p class="placeholeder-info">Rodape aqui!</p>
+    </div>
+    <!-- End Slider-->
+
+    <!-- Pricing Table -->
+    <section>
+        <div class="container">
+            <div class="price-container">
+                <div class="col-sm-4 price--full">
+                    <!-- Price table -->
+                    <div class="price">
+                        <header class="price__head">
+                            <h4 class="price__package">Speed Basic</h4>
+                            <p class="price__value">R$62,49</p>
+                            <p class="price__descript">mensais</p>
+                        </header>
+                        <ul class="price__content">
+                            <li class="price-quality">Download 1 MB</li>
+                            <li class="price-quality">Upload 320 KB</li>
+                            <li class="price-quality">Residencial</li>
+                            <li class="price-quality">Suporte Técnico</li>
+                            <li class="price-quality">Air Grid 5.4Ghz*</li>
+                        </ul>
+                        <footer>
+                            <a class="btn btn-warning btn--decorated price__btn" href="#">Assine já!</a>
+                        </footer>
+                    </div>
+                    <!-- end price table -->
+                </div><!-- end col -->
+
+                <div class="col-sm-4 price--full">
+                    <!-- Price table -->
+                    <div class="price price--popular">
+                        <header class="price__head">
+                            <h4 class="price__package">Speed Basic</h4>
+                            <p class="price__value">R$62,49</p>
+                            <p class="price__descript">mensais</p>
+                        </header>
+                        <ul class="price__content">
+                            <li class="price-quality">Download 1 MB</li>
+                            <li class="price-quality">Upload 320 KB</li>
+                            <li class="price-quality">Residencial</li>
+                            <li class="price-quality">Suporte Técnico</li>
+                            <li class="price-quality">Air Grid 5.4Ghz*</li>
+                        </ul>
+                        <footer>
+                            <a class="btn btn-warning btn--decorated price__btn" href="#">Assine já!</a>
+                        </footer>
+                    </div>
+                    <!-- end price table -->
+                </div><!-- end col -->
+
+                <div class="col-sm-4 price--full">
+                    <!-- Price table -->
+                    <div class="price">
+                        <header class="price__head">
+                            <h4 class="price__package">Speed Basic</h4>
+                            <p class="price__value">R$62,49</p>
+                            <p class="price__descript">mensais</p>
+                        </header>
+                        <ul class="price__content">
+                            <li class="price-quality">Download 1 MB</li>
+                            <li class="price-quality">Upload 320 KB</li>
+                            <li class="price-quality">Residencial</li>
+                            <li class="price-quality">Suporte Técnico</li>
+                            <li class="price-quality">Air Grid 5.4Ghz*</li>
+                        </ul>
+                        <footer>
+                            <a class="btn btn-warning btn--decorated price__btn" href="#">Assine já!</a>
+                        </footer>
+                    </div>
+                    <!-- end price table -->
+                </div><!-- end col -->
+            </div><!-- end row -->
         </div>
     </section>
-    <!-- end section show current page and breadcrumb -->
-
-    <section class="container">
-        <div class="row">
-            <div class="col-sm-6">
-
-            </div><!-- end col -->
-
-            <div class="col-sm-6">
-
-            </div><!-- end col -->
-        </div><!-- end row -->
-    </section><!-- end container -->
-
-    <div style="height:500px;"></div>
+    <!-- End Priceing Table-->
 
     <!-- Colored devider -->
     <div class="devider-color bottom-space"></div>
@@ -273,7 +397,9 @@
                             <div id="mc_embed_signup_scroll">
                                 <input type="email" value="" name="EMAIL" class="email form__input" id="mce-EMAIL" placeholder="enter email" required>
                                 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                <div style="position: absolute; left: -5000px;"><input type="text" name="b_21c10d3734fc03bebe9a827ab_ea1d7bc533" tabindex="-1" value=""></div>
+                                <div style="position: absolute; left: -5000px;">
+                                    <input type="text" name="b_21c10d3734fc03bebe9a827ab_ea1d7bc533" tabindex="-1" value="">
+                                </div>
                                 <div class="clear"><button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button form__submit"><span class="fa fa-arrow-circle-right"></span></button></div>
                             </div>
                         </form>
@@ -313,47 +439,65 @@
 <!-- External-->
 <!-- jQuery 1.10.1-->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="{{ asset('assets/external/jquery/jquery-1.10.1.min.js') }}"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="external/jquery/jquery-1.10.1.min.js"><\/script>')</script>
 <!-- Bootstrap 3-->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <!-- Mobile menu -->
-<script src="{{ asset('assets/external/z-nav/jquery.mobile.menu.js') }}"></script>
-<!-- Flexslider -->
-<script src="{{ asset('assets/external/flexslider/jquery.flexslider-min.js') }}"></script>
+<script src="{{ asset('assets/') }}external/z-nav/jquery.mobile.menu.js"></script>
+
+<!-- Sliders -->
+<!-- jQuery REVOLUTION Slider -->
+<script src="{{ asset('assets/external/rs-plugin/js/jquery.themepunch.plugins.min.js') }}"></script>
+<script src="{{ asset('assets/external/rs-plugin/js/jquery.themepunch.revolution.min.js') }}"></script>
 <!-- Touch slider - Swiper -->
 <script src="{{ asset('assets/external/swiper/idangerous.swiper.js') }}"></script>
+
+<!-- Twitter feed -->
+<script src="{{ asset('assets/external/twitterfeed/twitterfeed.js') }}"></script>
 <!-- Scroll to piugin -->
 <script src="{{ asset('assets/external/scrollto/jquery.scrollTo.min.js') }}"></script>
+
+<!-- Livicons -->
+<script src="{{ asset('assets/external/livicons/livicons-1.3.min.js') }}"></script>
+<script src="{{ asset('assets/external/livicons/raphael-min.js') }}"></script>
+
 <!-- Waypoints -->
 <script src="{{ asset('assets/external/waypoint/waypoints.min.js') }}"></script>
+<!-- Event that will trigger when the element is scrolled in to the viewport.-->
+<script src="{{ asset('assets/external/inview/jquery.inview.js') }}"></script>
+
 <!-- Custom -->
 <script src="{{ asset('assets/js/custom.js') }}"></script>
 
+
+
 <script>
     $(document).ready(function() {
-        flexSlider();
-        sliderSides();
-        scrollSlider();
+        revDefault();
+        featureSlider();
+        fadingSlider();
+        numberStart();
         preloader();
 
-        $('.animated-services').one('inview', function (event, visible) {
+        $('.feature .feature__heading').one('inview', function (event, visible) {
             if (visible == true) {
-                $('.service.start-1').addClass('zoomIn');
-                $('.service.start-2').addClass('zoomIn stage2');
-                $('.service.start-3').addClass('zoomIn stage3');
-                $('.service.start-4').addClass('zoomIn stage4');
+                $('.feature__image.start-1').addClass('fadeInUp');
+                $('.feature__image.start-2').addClass('fadeInUp stage2');
+                $('.feature__image.start-3').addClass('fadeInUp stage3');
             }
         });
 
-        $('.price-container').one('inview', function (event, visible) {
+        $('.animated-row').one('inview', function (event, visible) {
             if (visible == true) {
-                $('.price-container').addClass('fadeInUp');
+                $('.list.start-1').addClass('fadeInUp');
+                $('.image-container.start-2').addClass('fadeInUp stage2');
+                $('.list.start-3').addClass('fadeInUp stage3');
             }
         });
 
-        $('.share').one('inview', function (event, visible) {
+        $('.short-text').one('inview', function (event, visible) {
             if (visible == true) {
-                $('.share').addClass('fadeInUp');
+                $(this).addClass('fadeIn slow');
             }
         });
 
