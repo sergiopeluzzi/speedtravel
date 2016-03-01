@@ -268,7 +268,7 @@
                     <div class="price">
                         <header class="price__head">
                             <h4 class="price__package">Speed Basic</h4>
-                            <p class="price__value">R$62,49</p>
+                            <p class="price__value">R$ 62,49</p>
                             <p class="price__descript">mensais</p>
                         </header>
                         <ul class="price__content">
@@ -290,7 +290,7 @@
                     <div class="price price--popular">
                         <header class="price__head">
                             <h4 class="price__package">Speed Basic</h4>
-                            <p class="price__value">R$62,49</p>
+                            <p class="price__value">R$ 62,49</p>
                             <p class="price__descript">mensais</p>
                         </header>
                         <ul class="price__content">
@@ -312,7 +312,7 @@
                     <div class="price">
                         <header class="price__head">
                             <h4 class="price__package">Speed Basic</h4>
-                            <p class="price__value">R$62,49</p>
+                            <p class="price__value">R$ 62,49</p>
                             <p class="price__descript">mensais</p>
                         </header>
                         <ul class="price__content">
