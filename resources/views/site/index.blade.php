@@ -37,7 +37,7 @@
 
     <!-- Basic JavaScript-->
     <!-- Modernizr -->
-    <script src="{{ asset('assets/external/modernizr/modernizr.custom.js') }}"></script>
+    <!-- <script src="{{ asset('assets/external/modernizr/modernizr.custom.js') }}"></script> -->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
