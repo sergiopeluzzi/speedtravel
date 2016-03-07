@@ -26,44 +26,56 @@ class PlanosController extends Controller
     public function index()
     {
         $data['planos'] = $this->plano->paginate(5);
+
         return view('manager.planos.index')->with($data);
     }
 
     public function create()
     {
         $data['cidades'] = $this->cidade->lists('cidade', 'id');
+
         return view('manager.planos.create')->with($data);
     }
 
     public function store(Request $request)
     {
         $this->plano->create($request->all());
+        $plano = $this->plano->latest()->first();
+
+        foreach ($request->cidades as $cidade) {
+            $this->cidade->find($cidade)->planos()->attach($plano);
+        }
 
         $this->toast->message('Plano ' . $this->plano->latest()->first()->nome . ' cadastrado com sucesso', 'success');
-
         return redirect()->route('manager.planos.index');
     }
 
     public function edit($id)
     {
         $data['plano'] = $this->plano->find($id);
+        $data['cidades'] = $this->cidade->lists('cidade', 'id');
 
         return view('manager.planos.edit')->with($data);
     }
 
     public function update($id, Request $request)
     {
-        $this->plano->find($id)->update($request->all());
+        $plano = $this->plano->find($id);
+        $plano->update($request->all());
 
         $this->toast->message($this->plano->find($id)->nome . ' atualizado com sucesso', 'info');
-
         return redirect()->route('manager.planos.index');
     }
 
     public function destroy($id)
     {
-        $this->toast->message($this->plano->find($id)->nome . ' excluído com sucesso', 'error');
+        $plano = $this->plano->find($id);
+        foreach ($plano->cidades as $cidade) {
+            $c = $this->cidade->find($cidade->id);
+            $plano->cidades()->detach($c);
+        }
 
+        $this->toast->message($this->plano->find($id)->nome . ' excluído com sucesso', 'error');
         $this->plano->find($id)->delete();
 
         return redirect()->route('manager.planos.index');

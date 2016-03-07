@@ -20,6 +20,10 @@
                             {!! Form::label('descricao', 'Descrição') !!}
                             {!! Form::textArea('descricao', null, ['class' => 'contact__field', 'required']) !!}
                         </div>
+                        <div class="form-group col-md-10" align="left">
+                            {!! Form::label('cidades', 'Cidades') !!}
+                            {!! Form::select('cidades[]', $cidades, $plano->cidades->lists('id')->all(), ['id' => 'cidades', 'class' => 'contact__field', 'multiple', 'required']) !!}
+                        </div>
                         <div class="form-group col-md-4" align="left">
                             {!! Form::label('valor', 'Valor') !!}
                             {!! Form::text('valor', null, ['class' => 'contact__field', 'required']) !!}
@@ -45,5 +49,7 @@
 @stop
 
 @section('scripts')
-
+    <script type="text/javascript" >
+        $('#cidades').select2();
+    </script>
 @stop
