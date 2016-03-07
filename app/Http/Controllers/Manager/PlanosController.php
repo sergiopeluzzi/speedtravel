@@ -63,6 +63,14 @@ class PlanosController extends Controller
         $plano = $this->plano->find($id);
         $plano->update($request->all());
 
+        foreach ($plano->cidades as $excluir) {
+            $plano->cidades()->detach($excluir);
+        }
+
+        foreach ($request->cidades as $incluir) {
+            $this->cidade->find($incluir)->planos()->attach($plano);
+        }
+
         $this->toast->message($this->plano->find($id)->nome . ' atualizado com sucesso', 'info');
         return redirect()->route('manager.planos.index');
     }
