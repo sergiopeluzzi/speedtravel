@@ -479,7 +479,7 @@ a.text-danger:hover {
 }
 .bg-primary {
   color: #fff;
-  background-color: #428bca;
+  background-color: #afd9ee;
 }
 a.bg-primary:hover {
   background-color: #3071a9;
@@ -12640,28 +12640,28 @@ table th[class*="col-"] {
 }
 .btn--minimal-container-info {
   display: inline-block;
-  border: 6px solid #85d6de;
+  border: 1px solid #85d6de;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   border-radius: 25px;
 }
 .btn--minimal-container-warning {
   display: inline-block;
-  border: 6px solid #fed37f;
+  border: 1px solid #fed37f;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   border-radius: 25px;
 }
 .btn--minimal-container-primary {
   display: inline-block;
-  border: 6px solid #34495e;
+  border: 1px solid #34495e;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   border-radius: 25px;
 }
 .btn--minimal-container-danger {
   display: inline-block;
-  border: 6px solid #fe8f8c;
+  border: 1px solid #fe8f8c;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   border-radius: 25px;

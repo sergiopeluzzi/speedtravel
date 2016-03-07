@@ -30,7 +30,8 @@
     <link href="http://cdn.wijmo.com/jquery.wijmo-pro.all.3.20141.34.min.css" rel="stylesheet"/>
     <!-- mCustomScrollbar -->
     <link href="{{ asset('assets/external/mCustomScrollbar/jquery.mCustomScrollbar.css') }}" rel="stylesheet" />
-
+    <!-- Select2 -->
+    <link href="{{ asset('assets/external/select2-4.0.1/dist/css/select2.min.css') }}" rel="stylesheet" />
     <!-- Custom -->
     <link href="{{ asset('assets/css/style.css?v=1') }}" rel="stylesheet" />
 
@@ -136,6 +137,8 @@
 <script src="{{ asset('assets/external/bootstrap-datepicker/bootstrap-datepicker.js') }}"></script>
 <!-- mCustomScrollbar -->
 <script src="{{ asset('assets/external/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+<!-- Select2 -->
+<script src="{{ asset('assets/external/select2-4.0.1/dist/js/select2.full.min.js') }}"></script>
 
 <!-- Charts widget scripts -->
 <!--Wijmo Widgets JavaScript-->

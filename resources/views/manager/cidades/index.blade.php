@@ -7,7 +7,7 @@
 
             @include('toast::messages-jquery')
 
-            <div class="table-responsive">
+            <div class="table">
                 <table class="table table-bordered table--wide table-present">
                     <colgroup class="col-sm-width">
                     <colgroup class="col-sm-width">

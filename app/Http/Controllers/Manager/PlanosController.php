@@ -7,16 +7,19 @@ use Illuminate\Http\Request;
 
 use SpeedTravel\Http\Requests;
 use SpeedTravel\Http\Controllers\Controller;
+use SpeedTravel\Models\Cidade;
 use SpeedTravel\Models\Plano;
 
 class PlanosController extends Controller
 {
     private $plano;
+    private $cidade;
     private $toast;
 
-    public function __construct(Plano $plano, Toast $toast)
+    public function __construct(Plano $plano, Toast $toast, Cidade $cidade)
     {
         $this->plano = $plano;
+        $this->cidade = $cidade;
         $this->toast = $toast;
     }
 
@@ -28,7 +31,8 @@ class PlanosController extends Controller
 
     public function create()
     {
-        return view('manager.planos.create');
+        $data['cidades'] = $this->cidade->lists('cidade', 'id');
+        return view('manager.planos.create')->with($data);
     }
 
     public function store(Request $request)
