@@ -262,73 +262,37 @@
     <!-- Pricing Table -->
     <section>
         <div class="container">
+            <h2 class="block-title">Planos</h2>
             <div class="price-container">
-                <div class="col-sm-4 price--full">
-                    <!-- Price table -->
-                    <div class="price">
-                        <header class="price__head">
-                            <h4 class="price__package">Speed Basic</h4>
-                            <p class="price__value">R$ 62,49</p>
-                            <p class="price__descript">mensais</p>
-                        </header>
-                        <ul class="price__content">
-                            <li class="price-quality">Download 1 MB</li>
-                            <li class="price-quality">Upload 320 KB</li>
-                            <li class="price-quality">Residencial</li>
-                            <li class="price-quality">Suporte Técnico</li>
-                            <li class="price-quality">Air Grid 5.4Ghz*</li>
-                        </ul>
-                        <footer>
-                            <a class="btn btn-warning btn--decorated price__btn" href="#">Assine já!</a>
-                        </footer>
-                    </div>
-                    <!-- end price table -->
-                </div><!-- end col -->
-
-                <div class="col-sm-4 price--full">
-                    <!-- Price table -->
-                    <div class="price price--popular">
-                        <header class="price__head">
-                            <h4 class="price__package">Speed Basic</h4>
-                            <p class="price__value">R$ 62,49</p>
-                            <p class="price__descript">mensais</p>
-                        </header>
-                        <ul class="price__content">
-                            <li class="price-quality">Download 1 MB</li>
-                            <li class="price-quality">Upload 320 KB</li>
-                            <li class="price-quality">Residencial</li>
-                            <li class="price-quality">Suporte Técnico</li>
-                            <li class="price-quality">Air Grid 5.4Ghz*</li>
-                        </ul>
-                        <footer>
-                            <a class="btn btn-warning btn--decorated price__btn" href="#">Assine já!</a>
-                        </footer>
-                    </div>
-                    <!-- end price table -->
-                </div><!-- end col -->
-
-                <div class="col-sm-4 price--full">
-                    <!-- Price table -->
-                    <div class="price">
-                        <header class="price__head">
-                            <h4 class="price__package">Speed Basic</h4>
-                            <p class="price__value">R$ 62,49</p>
-                            <p class="price__descript">mensais</p>
-                        </header>
-                        <ul class="price__content">
-                            <li class="price-quality">Download 1 MB</li>
-                            <li class="price-quality">Upload 320 KB</li>
-                            <li class="price-quality">Residencial</li>
-                            <li class="price-quality">Suporte Técnico</li>
-                            <li class="price-quality">Air Grid 5.4Ghz*</li>
-                        </ul>
-                        <footer>
-                            <a class="btn btn-warning btn--decorated price__btn" href="#">Assine já!</a>
-                        </footer>
-                    </div>
-                    <!-- end price table -->
-                </div><!-- end col -->
+                @foreach($planos as $plano)
+                    <div class="col-sm-4 price--full">
+                        <!-- Price table -->
+                        <div class="price">
+                            <header class="price__head">
+                                <h4 class="price__package">{{ $plano->nome }}</h4>
+                                <p class="price__value">R$ {{ number_format($plano->valor, 2, ',', '.') }}</p>
+                                <p class="price__descript">mensais</p>
+                            </header>
+                            <ul class="price__content">
+                                <li class="price-quality">{{ $plano->categoria }}</li>
+                                <li class="price-quality">{{ $plano->descricao }}</li>
+                                <li class="price-quality">Residencial</li>
+                                <!--
+                                <li class="price-quality">Suporte Técnico</li>
+                                <li class="price-quality">Air Grid 5.4Ghz*</li>
+                                -->
+                            </ul>
+                            <footer>
+                                <a class="btn btn-warning btn--decorated price__btn" href="#">Assine já!</a>
+                            </footer>
+                        </div>
+                        <!-- end price table -->
+                    </div><!-- end col -->
+                @endforeach
             </div><!-- end row -->
+            <div align="center">
+                <a class="btn btn--decorated btn-info" href="#">Veja mais planos</a>
+            </div>
         </div>
     </section>
     <!-- End Priceing Table-->

@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', [ 'as' => 'site.index', function () {
-    return view('site.index');
-}]);
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -28,6 +24,9 @@ Route::get('/', [ 'as' => 'site.index', function () {
 
 Route::group(['middleware' => ['web']], function () {
 
+    /*
+     * Rotas BACK-END
+     */
     Route::group(['prefix' => 'manager'], function(){
         Route::get('/login', [ 'as' => 'manager.login', 'uses' => 'Auth\AuthController@getLogin']);
         Route::post('/login', [ 'as' => 'manager.login', 'uses' => 'Auth\AuthController@postLogin']);
@@ -54,5 +53,16 @@ Route::group(['middleware' => ['web']], function () {
             Route::put('/atualizar/{id}', ['as' => 'manager.planos.update', 'uses' => 'PlanosController@update']);
             Route::get('/excluir/{id}', ['as' => 'manager.planos.destroy', 'uses' => 'PlanosController@destroy']);
         });
+
+        Route::group(['prefix' => 'contatos'], function() {
+            Route::get('/', ['as' => 'manager.contatos.index', 'uses' => 'ContatosController@index']);
+        });
+    });
+
+    /*
+    * Rotas FRONT-END
+    */
+    Route::group(['namespace' => 'Site'], function() {
+        Route::get('/', [ 'as' => 'site.index', 'uses' => 'SiteController@index']);
     });
 });

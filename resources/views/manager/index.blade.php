@@ -88,6 +88,7 @@
                 <ul class="navigation">
                     <li class="navigation__item"><a class="navigation__link" href="{{ route('manager.cidades.index') }}"><i class="fa fa-building"></i>Cidades</a></li>
                     <li class="navigation__item"><a class="navigation__link" href="{{ route('manager.planos.index') }}"><i class="fa fa-location-arrow"></i>Planos</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="{{ route('manager.contatos.index') }}"><i class="fa fa-check"></i>Contatos</a></li>
                     <li class="navigation__item"><a class="navigation__link" href="#"><i class="fa fa-user"></i>Usuários</a></li>
                     <li class="navigation__item"><a class="navigation__link" href="#"><i class="fa fa-file"></i>Relatórios</a></li>
                 </ul>
