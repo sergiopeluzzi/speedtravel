@@ -11,8 +11,24 @@ class Cidade extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    public function planos()
+    public function internets()
     {
-        return $this->belongsToMany('SpeedTravel\Models\Plano', 'planos_cidades', 'cidadeid', 'planoid');
+        return $this->belongsToMany('SpeedTravel\Models\Internet', 'internets_cidades', 'cidadeid', 'internetid');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function tvs()
+    {
+        return $this->belongsToMany('SpeedTravel\Models\Tv', 'tvs_cidades', 'cidadeid', 'tvid');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function telefonias()
+    {
+        return $this->belongsToMany('SpeedTravel\Models\Telefonia', 'telefonias_cidades', 'cidadeid', 'telefoniaid');
     }
 }

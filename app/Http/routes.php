@@ -47,11 +47,34 @@ Route::group(['middleware' => ['web']], function () {
 
         Route::group(['prefix' => 'planos'], function(){
             Route::get('/', ['as' => 'manager.planos.index', 'uses' => 'PlanosController@index']);
-            Route::get('/adicionar', ['as' => 'manager.planos.create', 'uses' => 'PlanosController@create']);
-            Route::post('/salvar', ['as' => 'manager.planos.store', 'uses' => 'PlanosController@store']);
-            Route::get('/editar/{id}', ['as' => 'manager.planos.edit', 'uses' => 'PlanosController@edit']);
-            Route::put('/atualizar/{id}', ['as' => 'manager.planos.update', 'uses' => 'PlanosController@update']);
-            Route::get('/excluir/{id}', ['as' => 'manager.planos.destroy', 'uses' => 'PlanosController@destroy']);
+
+            Route::group(['prefix' => 'internet'], function(){
+                Route::get('/', ['as' => 'manager.planos.internet.index', 'uses' => 'InternetsController@index']);
+                Route::get('/adicionar', ['as' => 'manager.planos.internet.create', 'uses' => 'InternetsController@create']);
+                Route::post('/salvar', ['as' => 'manager.planos.internet.store', 'uses' => 'InternetsController@store']);
+                Route::get('/editar/{id}', ['as' => 'manager.planos.internet.edit', 'uses' => 'InternetsController@edit']);
+                Route::put('/atualizar/{id}', ['as' => 'manager.planos.internet.update', 'uses' => 'InternetsController@update']);
+                Route::get('/excluir/{id}', ['as' => 'manager.planos.internet.destroy', 'uses' => 'InternetsController@destroy']);
+            });
+
+            Route::group(['prefix' => 'tv'], function(){
+                Route::get('/', ['as' => 'manager.planos.tv.index', 'uses' => 'TvsController@index']);
+                Route::get('/adicionar', ['as' => 'manager.planos.tv.create', 'uses' => 'TvsController@create']);
+                Route::post('/salvar', ['as' => 'manager.planos.tv.store', 'uses' => 'TvsController@store']);
+                Route::get('/editar/{id}', ['as' => 'manager.planos.tv.edit', 'uses' => 'TvsController@edit']);
+                Route::put('/atualizar/{id}', ['as' => 'manager.planos.tv.update', 'uses' => 'TvsController@update']);
+                Route::get('/excluir/{id}', ['as' => 'manager.planos.tv.destroy', 'uses' => 'TvsController@destroy']);
+            });
+
+            Route::group(['prefix' => 'telefonia'], function(){
+                Route::get('/', ['as' => 'manager.planos.telefonia.index', 'uses' => 'TelefoniasController@index']);
+                Route::get('/adicionar', ['as' => 'manager.planos.telefonia.create', 'uses' => 'TelefoniasController@create']);
+                Route::post('/salvar', ['as' => 'manager.planos.telefonia.store', 'uses' => 'TelefoniasController@store']);
+                Route::get('/editar/{id}', ['as' => 'manager.planos.telefonia.edit', 'uses' => 'TelefoniasController@edit']);
+                Route::put('/atualizar/{id}', ['as' => 'manager.planos.telefonia.update', 'uses' => 'TelefoniasController@update']);
+                Route::get('/excluir/{id}', ['as' => 'manager.planos.telefonia.destroy', 'uses' => 'TelefoniasController@destroy']);
+            });
+
         });
 
         Route::group(['prefix' => 'contatos'], function() {
