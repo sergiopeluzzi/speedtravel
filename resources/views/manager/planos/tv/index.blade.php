@@ -21,7 +21,7 @@
                                 <th class="text-center">#</th>
                                 <th class="text-center">Nome</th>
                                 <th class="text-center">Descrição</th>
-                                <th class="text-center">Minutos</th>
+                                <th class="text-center">Canais</th>
                                 <th class="text-center">$ Residencial</th>
                                 <th class="text-center">$ Empresarial</th>
                                 <th class="text-center">Ações</th>
