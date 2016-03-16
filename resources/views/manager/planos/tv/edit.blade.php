@@ -3,16 +3,17 @@
 @section('conteudo')
     <section>
         <div class="container">
-            <h2 class="heading heading--start">Planos | Edição ({{ $plano->nome }})</h2>
+            <h2 class="heading heading--start">Planos | Tv | Edição ({{ $tv->nome }})</h2>
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-wrapper">
-                        {!! Form::model($plano, ['route' => ['manager.planos.update', $plano->id], 'method' => 'put', 'class' => 'contact']) !!}
-                        <div class="form-group col-md-10" align="left">
-                            {!! Form::label('categoria', 'Categoria') !!}
-                            {!! Form::select('categoria', ['Internet' => 'Internet', 'TV' => 'TV', 'Telefonia' => 'Telefonia'], null, ['class' => 'contact__field', 'required']) !!}
+                        {!! Form::model($tv, ['route' => ['manager.planos.tv.update', $tv->id], 'method' => 'put', 'class' => 'contact']) !!}
+                        <div class="form-group col-md-4" align="left">
+                            {!! Form::label('ativo', 'Status') !!}
+                            {!! Form::select('ativo', ['1' => 'Ativo', '0' => 'Inativo'], null, ['id' => 'ativo', 'class' => 'contact__field']) !!}
                         </div>
                         <div class="form-group col-md-10" align="left">
+                            <br>
                             {!! Form::label('nome', 'Nome') !!}
                             {!! Form::text('nome', null, ['class' => 'contact__field', 'required']) !!}
                         </div>
@@ -20,24 +21,31 @@
                             {!! Form::label('descricao', 'Descrição') !!}
                             {!! Form::textArea('descricao', null, ['class' => 'contact__field', 'required']) !!}
                         </div>
+                        <div class="form-group col-md-4" align="left">
+                            {!! Form::label('canais', 'Canais') !!}
+                            {!! Form::text('canais', null, ['class' => 'contact__field', 'required']) !!}
+                        </div>
+                        <div class="form-group col-md-3" align="left">
+                            {!! Form::label('valorresidencial', 'Valor Residencial') !!}
+                            {!! Form::text('valorresidencial', null, ['class' => 'contact__field', 'required']) !!}
+                        </div>
+                        <div class="form-group col-md-3" align="left">
+                            {!! Form::label('valorempresarial', 'Valor Empresarial') !!}
+                            {!! Form::text('valorempresarial', null, ['class' => 'contact__field', 'required']) !!}
+                        </div>
                         <div class="form-group col-md-10" align="left">
                             {!! Form::label('cidades', 'Cidades') !!}
-                            {!! Form::select('cidades[]', $cidades, $plano->cidades->lists('id')->all(), ['id' => 'cidades', 'class' => 'contact__field', 'multiple', 'required']) !!}
+                            {!! Form::select('cidades[]', $cidades, $tv->cidades->lists('id')->all(), ['id' => 'cidades', 'class' => 'contact__field', 'multiple', 'required']) !!}
                         </div>
-                        <div class="form-group col-md-4" align="left">
-                            {!! Form::label('valor', 'Valor') !!}
-                            {!! Form::text('valor', null, ['class' => 'contact__field', 'required']) !!}
-                        </div>
-                        <div class="form-group col-md-4" align="left">
-                            {!! Form::label('ativo', 'Status') !!}
-                            {!! Form::select('ativo', ['1' => 'Ativo', '0' => 'Inativo'], null, ['class' => 'contact__field']) !!}
-                        </div>
+
                         <div class="form-group col-md-12" align="left">
+                            <br>
+                            <br>
                             <div class="btn--minimal-container-primary btn-present">
                                 <button class="btn btn-primary btn--minimal" type="submit">Salvar</button>
                             </div>
                             <div class="btn--minimal-container-danger btn-present">
-                                <a class="btn btn-danger btn--minimal" href="{{ route('manager.planos.index') }}">Voltar</a>
+                                <a class="btn btn-danger btn--minimal" href="{{ route('manager.planos.tv.index') }}">Voltar</a>
                             </div>
                         </div>
                         {!! Form::close() !!}
@@ -50,6 +58,7 @@
 
 @section('scripts')
     <script type="text/javascript" >
+        $('#ativo').select2();
         $('#cidades').select2();
     </script>
 @stop

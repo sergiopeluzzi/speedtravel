@@ -3,7 +3,7 @@
 @section('conteudo')
     <section>
         <div class="container col-md-12">
-            <h2 class="heading heading--start">Planos | Lista</h2>
+            <h2 class="heading heading--start">Planos | Tv | Lista</h2>
 
             @include('toast::messages-jquery')
 
@@ -21,23 +21,25 @@
                                 <th class="text-center">#</th>
                                 <th class="text-center">Nome</th>
                                 <th class="text-center">Descrição</th>
-                                <th class="text-center">Categoria</th>
-                                <th class="text-center">Valor</th>
+                                <th class="text-center">Minutos</th>
+                                <th class="text-center">$ Residencial</th>
+                                <th class="text-center">$ Empresarial</th>
                                 <th class="text-center">Ações</th>
                             </tr>
                         </thead>
 
                         <tbody>
-                            @foreach($planos as $plano)
-                            <tr @if($plano->ativo == 0) class="bg-danger" @endif>
-                                <td class="text-center">{{ $plano->id }}</td>
-                                <td>{{ $plano->nome }}</td>
-                                <td>{{ $plano->descricao }}</td>
-                                <td>{{ $plano->categoria }}</td>
-                                <td class="text-center">R$ {{ number_format($plano->valor, 2, ',', '.') }}</td>
+                            @foreach($tvs as $tv)
+                            <tr @if($tv->ativo == 0) class="bg-danger" @endif>
+                                <td class="text-center">{{ $tv->id }}</td>
+                                <td>{{ $tv->nome }}</td>
+                                <td>{{ $tv->descricao }}</td>
+                                <td>{{ $tv->canais }}</td>
+                                <td class="text-center">R$ {{ number_format($tv->valorresidencial, 2, ',', '.') }}</td>
+                                <td class="text-center">R$ {{ number_format($tv->valorempresarial, 2, ',', '.') }}</td>
                                 <td class="text-center">
-                                    <a class="btn btn-warning btn-sm" href="{{ route('manager.planos.edit', ['id' => $plano->id]) }}">Editar</a>
-                                    <a class="btn btn-danger btn-sm" data-toggle="modal" data-target="#confirm-delete" href="#" data-href="{{ route('manager.planos.destroy', ['id' => $plano->id]) }}">Excluir</a>
+                                    <a class="btn btn-warning btn-sm" href="{{ route('manager.planos.tv.edit', ['id' => $tv->id]) }}">Editar</a>
+                                    <a class="btn btn-danger btn-sm" data-toggle="modal" data-target="#confirm-delete" href="#" data-href="{{ route('manager.planos.tv.destroy', ['id' => $tv->id]) }}">Excluir</a>
                                 </td>
                             </tr>
                             @endforeach
@@ -45,10 +47,10 @@
                 </table>
 
             </div>
-            {!! $planos->links() !!}
+            {!! $tvs->links() !!}
             <div class="col-md-12">
                 <div class="btn--minimal-container-primary btn-present">
-                    <a class="btn btn-primary btn--minimal" href="{{ route('manager.planos.create') }}">Adicionar</a>
+                    <a class="btn btn-primary btn--minimal" href="{{ route('manager.planos.tv.create') }}">Adicionar</a>
                 </div>
             </div>
             <!-- end col -->
