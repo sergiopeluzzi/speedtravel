@@ -2274,7 +2274,7 @@ ol {
 }
 .logo img {
   width: 294px;
-  height: 106px;
+  height: 90px;
 }
 .logo .logo__text {
   padding: 9px 0 9px 65px;
@@ -14604,7 +14604,7 @@ table th[class*="col-"] {
   text-align: center;
 }
 .product--list .product__price {
-  margin-top: 45%;
+  margin-top: 15%;
   font-size: 42px;
   line-height: 42px;
   margin-bottom: 12px;

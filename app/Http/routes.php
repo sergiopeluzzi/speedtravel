@@ -87,5 +87,9 @@ Route::group(['middleware' => ['web']], function () {
     */
     Route::group(['namespace' => 'Site'], function() {
         Route::get('/', [ 'as' => 'site.index', 'uses' => 'SiteController@index']);
+        Route::get('/internet', ['as' => 'site.internet', 'uses' => 'SiteController@internet']);
+        Route::get('/telefonia', ['as' => 'site.telefonia', 'uses' => 'SiteController@telefonia']);
+        Route::get('/tv', ['as' => 'site.tv', 'uses' => 'SiteController@tv']);
+        Route::get('/assine', ['as' => 'site.assine', 'uses' => 'SiteController@assine']);
     });
 });
